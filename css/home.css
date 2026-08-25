@@ -1,0 +1,386 @@
+/* ============================================================
+   Home page — SZA-inspired overgrown forest hero
+   ============================================================ */
+
+:root {
+  --forest: #232b1e;
+  --moss: #4c5a3f;
+  --moss-light: #6f7f5c;
+  --dust: #cdbfa0;
+  --screen-glow: #9fd6d1;
+  --ink: #14140f;
+  --paper: #e7e0cc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--forest);
+  color: var(--paper);
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+}
+
+/* film grain overlay for photographic feel */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+a { text-decoration: none; color: inherit; }
+
+nav.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 56px;
+  background: rgba(20, 20, 15, 0.4);
+  backdrop-filter: blur(3px);
+  position: relative;
+  z-index: 3;
+}
+
+nav.top .logo {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dust);
+}
+
+nav.top .logo-vine-wrap {
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 2px 6px;
+}
+
+nav.top .logo-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--dust);
+  white-space: nowrap;
+  text-shadow:
+    0 0 10px rgba(35, 43, 30, 0.95),
+    0 1px 4px rgba(20, 20, 15, 0.85),
+    1px 0 2px rgba(35, 43, 30, 0.5),
+    -1px 0 2px rgba(35, 43, 30, 0.5);
+}
+
+nav.top .logo-vine {
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 16px);
+  height: 34px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.93;
+}
+
+nav.top .links {
+  display: flex;
+  gap: 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+nav.top .links a { color: var(--dust); opacity: 0.88; transition: opacity 0.15s ease; }
+nav.top .links a:hover { opacity: 1; }
+nav.top .links a.active { opacity: 1; color: var(--screen-glow); }
+
+.hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  padding: 72px 56px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(159, 214, 209, 0.08), transparent 55%),
+    linear-gradient(180deg, #1b2216 0%, #232b1e 45%, #2c3624 100%);
+}
+
+#plantCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: grab;
+  touch-action: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  margin-left: 40px;
+  pointer-events: none;
+}
+
+.hero-content .eyebrow,
+.hero-content h1,
+.hero-content .hero-sub {
+  pointer-events: none;
+}
+
+/* overgrown texture strokes */
+.foliage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 88% 18%, rgba(79, 95, 58, 0.32), transparent 48%),
+    radial-gradient(circle at 92% 88%, rgba(60, 72, 45, 0.38), transparent 46%),
+    radial-gradient(circle at 55% 100%, rgba(35, 43, 26, 0.55), transparent 58%);
+}
+
+.badge-row { margin-bottom: 24px; }
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--screen-glow);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--paper);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content h1 em { font-style: italic; color: var(--dust); }
+
+.hero-content h1 .cursor {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--dust);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero-sub {
+  margin-top: 28px;
+  font-size: 17px;
+  color: var(--paper);
+  opacity: 0.82;
+  max-width: 460px;
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* removed .plant-stage — canvas is full-bleed inside .hero */
+
+section.projects {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 72px 56px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.projects .section-head,
+.projects .grid {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: #fbf7ec;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(35, 43, 30, 0.08);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+}
+
+.card-vine-canvas,
+.thumb-vine-canvas {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.thumb,
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.card.thumb-hovered {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(35, 43, 30, 0.12);
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.thumb-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.thumb > img,
+.thumb-frame img {
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-contain .thumb-frame {
+  background: #fff;
+}
+
+.thumb-contain > img,
+.thumb-contain .thumb-frame img {
+  object-fit: contain;
+  padding: 10px;
+  background: #fff;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.section-head span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.thumb-contain { background: transparent; }
+
+.card-body { display: flex; flex-direction: column; flex: 1; }
+
+.card-body .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 6px;
+}
+
+.card-body h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.read-more {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: none;
+  color: var(--moss);
+  border: 1.5px solid var(--moss);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: auto;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.read-more:hover { background: var(--moss); color: var(--paper); }
+
+footer.site-footer {
+  background: #14140f;
+  color: var(--dust);
+  padding: 28px 56px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer.site-footer nav { display: flex; gap: 22px; }
+footer.site-footer a { opacity: 0.7; }
+footer.site-footer a:hover { opacity: 1; }
+
+@media (max-width: 1100px) {
+  .hero-content h1 { font-size: 64px; }
+  .hero-content { margin-left: 28px; }
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-content h1 { font-size: 54px; }
+}
+
+@media (max-width: 680px) {
+  #plantCanvas { display: none; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding: 40px 28px; min-height: 520px; }
+  .hero-content { margin-left: 0; max-width: 100%; }
+  section.projects { padding: 48px 28px; }
+  nav.top { padding: 20px 28px; }
+  nav.top .links { gap: 18px; flex-wrap: wrap; }
+  nav.top .logo-text { font-size: 14px; }
+  nav.top .logo-vine { height: 28px; left: -4px; right: -4px; width: calc(100% + 8px); }
+}
