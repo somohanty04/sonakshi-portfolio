@@ -60,13 +60,12 @@
 
       <section>
         <h2>Overview</h2>
-        <p>Daily Dose is a medication reminder app designed for seniors first. Our COGS 120 team identified gaps in existing medication apps, synthesized published research on adherence and accessibility, and designed lo-fi and hi-fi prototypes grounded in HCI principles.</p>
-        <p>This case study walks through the problem, what existing tools get wrong, how we structured the experience, and the three core interaction areas we designed: reminders, accessibility, and medication support.</p>
+        <p>For COGS 120, our team designed Daily Dose, a medication reminder app aimed at seniors. We started by reviewing existing apps and reading published research on adherence, then built paper sketches, lo-fi wireframes, and hi-fi screens.</p>
       </section>
 
       <section>
         <h2>The Problem</h2>
-        <p>Seniors often struggle to manage medications. Missed doses, confusion, and difficulty reading small labels are common. Digital tools exist, but many older adults find them too complex. People instead rely on written notes and basic alarms that lack reminders, real-time information, and personalized support.</p>
+        <p>Seniors often struggle to manage medications. Missed doses, confusion, and difficulty reading small labels are common. Plenty of medication apps exist, but many older adults still find them hard to use. A lot of people fall back on written notes or a basic phone alarm, which don&rsquo;t confirm whether a dose was actually taken or help track what was missed.</p>
         <p>Poor adherence can lead to hospitalizations, preventable drug interactions, and higher healthcare costs, especially as cognitive decline and forgetfulness make routines harder to maintain.</p>
         <figure class="figure-photo">
           <img src="assets/daily-dose/figures/pres-p2-img2.jpeg" alt="Hands holding a medication container with dense, small-print drug facts labeling" />
@@ -76,12 +75,12 @@
 
       <section>
         <h2>Where Existing Apps Fall Short</h2>
-        <p>We reviewed Pillboxie, MyTherapy, and Medisafe and mapped each limitation to an HCI principle. These critiques directly shaped our design priorities.</p>
+        <p>We looked at Pillboxie, MyTherapy, and Medisafe and wrote down what each one got wrong, using HCI principles from class to explain why those gaps mattered.</p>
 
         <div class="interview-card">
           <h4>Pillboxie: weak reminder system</h4>
           <p><strong>Principle violated:</strong> Visibility of system status</p>
-          <p>No confirmation that medication was taken, no feedback when a dose is missed, and no persistent reminders or progress tracking.</p>
+          <p>There&rsquo;s no clear confirmation that a dose was taken, nothing that tells you if you missed one, and the reminders don&rsquo;t keep following up the way a real adherence tool probably should.</p>
         </div>
         <div class="interview-card">
           <h4>MyTherapy: no drug interaction warnings</h4>
@@ -97,18 +96,18 @@
 
       <section>
         <h2>What the Research Told Us</h2>
-        <p>We synthesized published work on medication adherence and barriers for older adults. We did not conduct our own user interviews or usability tests as part of the documented deliverables.</p>
+        <p>For our proposal, we pulled findings from published studies on medication adherence and why older adults struggle with health apps. We didn&rsquo;t run our own interviews or usability tests; this section is based on that literature review.</p>
         <ul>
           <li>Existing medication apps often fail on navigation, visibility, and transparency for older adults.</li>
           <li>Patel et al. found that completing a task in electronic adherence products takes an average of <strong>12.7 steps and 15.19 minutes</strong>.</li>
           <li>Less than one-third of older adults who own mobile devices use health apps.</li>
-          <li>Effective design for seniors emphasizes large typography, high contrast, reduced clutter, voice support, and personalization.</li>
+          <li>Across the studies we read, the same recommendations kept coming up: bigger type, higher contrast, less clutter, and settings that let someone adjust the interface to their vision.</li>
         </ul>
       </section>
 
       <section>
         <h2>Process</h2>
-        <p>We started on paper, mapped the information architecture, built a shared visual system, and explored core flows in lo-fi before moving to hi-fi screens.</p>
+        <p>We sketched on paper first, then mapped out the app structure, put together a style guide, and tested the main flows in lo-fi before polishing them in hi-fi.</p>
 
         <h3>Early exploration</h3>
         <figure class="figure-wide">
@@ -127,7 +126,7 @@
         </figure>
         <figure class="figure-wide">
           <img src="assets/daily-dose/hifi/color-testing.png" alt="Color contrast testing grid for Daily Dose UI elements" />
-          <figcaption>Color contrast testing to validate readable pairings before applying them to screens.</figcaption>
+          <figcaption>We tested color pairings for contrast before using them on the hi-fi screens.</figcaption>
         </figure>
 
         <h3>Lo-fi wireframes</h3>
@@ -147,13 +146,13 @@
 
       <section>
         <h2>Key Interactions</h2>
-        <p>Each section below addresses one competitor gap with a specific interaction design response, shown with the hi-fi screens from our presentation.</p>
+        <p>The three sections below focus on the parts of the app we spent the most time on: reminders, accessibility settings, and connecting users to caregivers and doctors. The hi-fi screens match what we presented in class.</p>
 
         <h3>1. Reminders and feedback</h3>
         <p><em>Addresses:</em> Pillboxie&rsquo;s weak reminder system</p>
 
         <div class="design-decision">
-          <span class="principle-tag">Visibility of system status &middot; Consistency &middot; Reduced cognitive load</span>
+          <span class="principle-tag">Design principles: Visibility of system status &middot; Consistency &middot; Reduced cognitive load</span>
           <h4>Make dose status visible and completion rewarding</h4>
           <p><strong>Problem:</strong> Users cannot tell whether today&rsquo;s medications are done, overdue, or still pending.</p>
           <p><strong>Decision:</strong> Show today&rsquo;s tasks on the home screen with tap-to-complete cards, celebration feedback after each dose, and a reminders view with active and missed sections.</p>
@@ -175,7 +174,7 @@
         <p><em>Addresses:</em> General usability barriers for aging users</p>
 
         <div class="design-decision">
-          <span class="principle-tag">Discoverability &middot; Recognition rather than recall &middot; Minimalist design</span>
+          <span class="principle-tag">Design principles: Discoverability &middot; Recognition rather than recall &middot; Minimalist design</span>
           <h4>Let users adapt the interface to their vision</h4>
           <p><strong>Problem:</strong> Fixed UI with small text and low contrast excludes users with visual or cognitive impairments.</p>
           <p><strong>Decision:</strong> High-contrast task cards, four primary nav destinations, and accessibility settings (text size, bold text, high-contrast mode) in Profile with live preview.</p>
@@ -201,7 +200,7 @@
         <p><em>Addresses:</em> Fragmented communication and lack of personalized support</p>
 
         <div class="design-decision">
-          <span class="principle-tag">Flexibility &middot; Mental models &middot; Direct communication</span>
+          <span class="principle-tag">Design principles: Flexibility &middot; Mental models &middot; Direct communication</span>
           <h4>Centralize reminders, contacts, and AI support</h4>
           <p><strong>Problem:</strong> Users switch between apps for reminders, caregiver contact, and immediate help with medication questions.</p>
           <p><strong>Decision:</strong> Familiar alarm-page patterns for managing reminders, built-in doctor and caregiver contacts with messaging, and an AI companion for immediate answers. Multiple ways to add medication: typing, scanning, or provider import.</p>
@@ -222,7 +221,7 @@
 
       <section>
         <h2>Prototype</h2>
-        <p>Our team linked lo-fi and hi-fi frames in a clickable Figma prototype and recorded a narrated video walkthrough.</p>
+        <p>We connected the lo-fi and hi-fi screens in a clickable Figma prototype and recorded a walkthrough video for our presentation.</p>
         <p>
           <a class="case-external-link" href="https://www.figma.com/proto/HdGO497yGjpqMjgrzuVFvc/Cogs-120-Low-fi?node-id=304-4214&amp;p=f&amp;t=n85lFXev3AnyfQlo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=238%3A1254&amp;starting-point-node-id=304%3A4214" target="_blank" rel="noopener">View Figma prototype &rarr;</a>
         </p>
@@ -233,20 +232,20 @@
 
       <section>
         <h2>What We Would Improve</h2>
-        <p>Our final critique identified these documented limitations. None were implemented in the deliverables.</p>
+        <p>After presenting, we wrote down what still felt rough. These are things we&rsquo;d change in a next version. None of them were part of the final deliverable.</p>
         <ul>
-          <li><strong>Text-heavy medication pages:</strong> dense information could cause cognitive overload; progressive disclosure or AI simplification would help.</li>
-          <li><strong>Too many steps in some flows:</strong> icons, tooltips, smart defaults, or scan-based input could reduce friction.</li>
-          <li><strong>Underutilized AI assistant:</strong> currently on one page; a persistent icon with proactive suggestions would increase its value.</li>
-          <li><strong>Limited caregiver intervention:</strong> providers can monitor but not intervene directly; dedicated dependent sign-in flows would expand their role.</li>
-          <li><strong>Inconsistent visual design:</strong> button styles and transitions vary; a stronger design system would improve predictability.</li>
+          <li><strong>Text-heavy medication pages:</strong> the information is useful but dense, and could be easier to scan with progressive disclosure or simpler summaries.</li>
+          <li><strong>Too many steps in some flows:</strong> a few screens still feel long; icons, tooltips, or scan-based input could cut down the number of taps.</li>
+          <li><strong>Underutilized AI assistant:</strong> right now the chatbot only shows up on one screen. It would be more useful as a persistent button or a feature that proactively offers help.</li>
+          <li><strong>Limited caregiver intervention:</strong> caregivers and providers can see what&rsquo;s happening, but can&rsquo;t do much beyond that. Separate sign-in flows for dependents could give them more ways to step in.</li>
+          <li><strong>Inconsistent visual design:</strong> button styles and transitions aren&rsquo;t fully uniform yet. A tighter design system would make the app feel more predictable as you move between screens.</li>
         </ul>
       </section>
 
       <section>
         <h2>Reflection</h2>
-        <p>Daily Dose pushed our team to design for users whose needs differ sharply from our own. Grounding features in published research and HCI principles kept the project focused on interaction behavior, not just visual polish.</p>
-        <p>The 12.7-step average in existing adherence products set a clear benchmark. Making dose status visible, limiting alarm controls, and placing accessibility settings where users can discover them were deliberate responses to documented gaps.</p>
+        <p>This was one of the first projects where we had to design for people whose daily experience is really different from ours. It forced us to think about things we usually take for granted, like whether text is big enough to read or whether someone can tell a task is finished.</p>
+        <p>One number that stuck with us from the research was Patel et al.&rsquo;s finding that existing adherence tools take about 12.7 steps and 15 minutes to complete a single task. That made us pay attention to how many taps each flow required, where missed doses show up, and whether accessibility settings are easy to find without digging through menus.</p>
       </section>
     </div>
 
