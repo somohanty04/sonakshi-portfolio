@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Dose | Sonakshi's Portfolio</title>
+  <link rel="icon" href="assets/fb96c1_79ef72436056467489d13484bd63ab14.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="case-page beli-case">
+  <header class="site-header">
+    <div class="inner">
+      <a class="logo" href="index.html">
+        <span class="logo-vine-wrap">
+          <svg class="logo-vine" viewBox="0 0 320 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M-2,22 C28,8 52,34 82,20 S128,6 162,24 S208,36 242,18 S278,8 324,22" fill="none" stroke="#4c5a3f" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M-2,22 C28,8 52,34 82,20 S128,6 162,24 S208,36 242,18 S278,8 324,22" fill="none" stroke="#6f7f5c" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+            <path d="M18,28 Q24,36 30,28 Q24,26 18,28" fill="#4c5a3f" opacity="0.8"/>
+            <path d="M58,14 Q64,6 70,14 Q64,16 58,14" fill="#5a6b48"/>
+            <path d="M118,28 Q124,20 130,28 Q124,30 118,28" fill="#6f7f5c"/>
+            <path d="M168,10 Q174,2 180,10 Q174,12 168,10" fill="#5a6b48"/>
+            <path d="M218,30 Q224,22 230,30 Q224,32 218,30" fill="#7a8f64"/>
+            <path d="M268,12 Q274,4 280,12 Q274,14 268,12" fill="#5a6b48"/>
+            <path d="M308,24 Q314,16 320,24 Q314,26 308,24" fill="#6f7f5c" opacity="0.85"/>
+          </svg>
+          <span class="logo-text">Sonakshi's Portfolio</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="published.html">PUBLISHED</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-hero">
+      <div class="inner">
+        <h1>Daily Dose</h1>
+        <p class="subtitle">Interaction design for senior medication adherence</p>
+        <div class="case-meta">
+          <div class="item"><h4>Course</h4><p>COGS 120<br />UC San Diego</p></div>
+          <div class="item"><h4>Timeline</h4><p>4 weeks</p></div>
+          <div class="item"><h4>Team</h4><p>5 members<br />Team project</p></div>
+          <div class="item"><h4>Deliverables</h4><p>Research proposal<br />Lo-fi &amp; hi-fi prototype<br />Video walkthrough</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <figure class="figure-cover">
+        <img src="assets/daily-dose/daily-dose-logo.png" alt="Daily Dose logo with pill icon on dusty rose background" />
+      </figure>
+
+      <section>
+        <h2>Overview</h2>
+        <p>Daily Dose is a medication reminder app designed for seniors first. Our COGS 120 team identified gaps in existing medication apps, synthesized published research on adherence and accessibility, and designed lo-fi and hi-fi prototypes grounded in HCI principles.</p>
+        <p>This case study walks through the problem, what existing tools get wrong, how we structured the experience, and the three core interaction areas we designed: reminders, accessibility, and medication support.</p>
+      </section>
+
+      <section>
+        <h2>The Problem</h2>
+        <p>Seniors often struggle to manage medications. Missed doses, confusion, and difficulty reading small labels are common. Digital tools exist, but many older adults find them too complex. People instead rely on written notes and basic alarms that lack reminders, real-time information, and personalized support.</p>
+        <p>Poor adherence can lead to hospitalizations, preventable drug interactions, and higher healthcare costs, especially as cognitive decline and forgetfulness make routines harder to maintain.</p>
+        <figure class="figure-photo">
+          <img src="assets/daily-dose/figures/pres-p2-img2.jpeg" alt="Hands holding a medication container with dense, small-print drug facts labeling" />
+          <figcaption>Dense medication labeling makes dosage and safety information hard to read without assistance.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Where Existing Apps Fall Short</h2>
+        <p>We reviewed Pillboxie, MyTherapy, and Medisafe and mapped each limitation to an HCI principle. These critiques directly shaped our design priorities.</p>
+
+        <div class="interview-card">
+          <h4>Pillboxie: weak reminder system</h4>
+          <p><strong>Principle violated:</strong> Visibility of system status</p>
+          <p>No confirmation that medication was taken, no feedback when a dose is missed, and no persistent reminders or progress tracking.</p>
+        </div>
+        <div class="interview-card">
+          <h4>MyTherapy: no drug interaction warnings</h4>
+          <p><strong>Principle violated:</strong> Error prevention</p>
+          <p>Users are not alerted to potentially dangerous drug interactions before harmful combinations occur.</p>
+        </div>
+        <div class="interview-card">
+          <h4>Medisafe: limited senior usability</h4>
+          <p><strong>Principle violated:</strong> Match between the system and the real world</p>
+          <p>Testing focused primarily on hypertension patients, leaving gaps for seniors with diverse conditions and cognitive needs.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>What the Research Told Us</h2>
+        <p>We synthesized published work on medication adherence and barriers for older adults. We did not conduct our own user interviews or usability tests as part of the documented deliverables.</p>
+        <ul>
+          <li>Existing medication apps often fail on navigation, visibility, and transparency for older adults.</li>
+          <li>Patel et al. found that completing a task in electronic adherence products takes an average of <strong>12.7 steps and 15.19 minutes</strong>.</li>
+          <li>Less than one-third of older adults who own mobile devices use health apps.</li>
+          <li>Effective design for seniors emphasizes large typography, high contrast, reduced clutter, voice support, and personalization.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Process</h2>
+        <p>We started on paper, mapped the information architecture, built a shared visual system, and explored core flows in lo-fi before moving to hi-fi screens.</p>
+
+        <h3>Early exploration</h3>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/lofi/paper-wireframes.png" alt="Hand-drawn paper wireframes for home, calendar, medications, profile, notifications, and settings" />
+          <figcaption>Paper wireframes exploring home tasks, missed-dose alerts, medication grids, and accessibility settings.</figcaption>
+        </figure>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/hifi/information-architecture.png" alt="Daily Dose information architecture sitemap" />
+          <figcaption>Information architecture: Home, Alarm, Medications, and Profile with nested sub-flows.</figcaption>
+        </figure>
+
+        <h3>Visual system</h3>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/hifi/style-guide.png" alt="Daily Dose style guide with color swatches, typography, and components" />
+          <figcaption>Style guide defining color roles, type scales, and core components.</figcaption>
+        </figure>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/hifi/color-testing.png" alt="Color contrast testing grid for Daily Dose UI elements" />
+          <figcaption>Color contrast testing to validate readable pairings before applying them to screens.</figcaption>
+        </figure>
+
+        <h3>Lo-fi wireframes</h3>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/lofi/medication-section.png" alt="Lo-fi wireframes for medication list, add flow, and detail screens" />
+          <figcaption>Medication flows: browse, add, and edit screens.</figcaption>
+        </figure>
+        <figure class="figure-phone">
+          <img src="assets/daily-dose/lofi/alarm.png" alt="Lo-fi alarm and calendar screen with reminders and missed doses" />
+          <figcaption>Alarm and reminder states with missed-dose tracking.</figcaption>
+        </figure>
+        <figure class="figure-wide">
+          <img src="assets/daily-dose/lofi/settings.png" alt="Lo-fi wireframes for accessibility and profile settings" />
+          <figcaption>Accessibility settings: text size, high contrast, voice assist, and profile editing.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Key Interactions</h2>
+        <p>Each section below addresses one competitor gap with a specific interaction design response, shown with the hi-fi screens from our presentation.</p>
+
+        <h3>1. Reminders and feedback</h3>
+        <p><em>Addresses:</em> Pillboxie&rsquo;s weak reminder system</p>
+
+        <div class="design-decision">
+          <span class="principle-tag">Visibility of system status &middot; Consistency &middot; Reduced cognitive load</span>
+          <h4>Make dose status visible and completion rewarding</h4>
+          <p><strong>Problem:</strong> Users cannot tell whether today&rsquo;s medications are done, overdue, or still pending.</p>
+          <p><strong>Decision:</strong> Show today&rsquo;s tasks on the home screen with tap-to-complete cards, celebration feedback after each dose, and a reminders view with active and missed sections.</p>
+          <p><strong>Interaction:</strong> Tap a task to mark it complete. Optional missed-dose re-ring keeps reminders active until confirmed. Alarm controls limited to edit, add, and update missed doses.</p>
+        </div>
+
+        <div class="img-pair">
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p6-img2.jpeg" alt="Home screen with congratulations modal after completing a medication task" />
+            <figcaption>Home screen with positive reinforcement after completing a dose.</figcaption>
+          </figure>
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p6-img3.jpeg" alt="Reminders screen with calendar, active reminders, and missed dose section" />
+            <figcaption>Reminders view with calendar, active alerts, missed doses, and quick access to medication history.</figcaption>
+          </figure>
+        </div>
+
+        <h3>2. Accessible, adaptable interface</h3>
+        <p><em>Addresses:</em> General usability barriers for aging users</p>
+
+        <div class="design-decision">
+          <span class="principle-tag">Discoverability &middot; Recognition rather than recall &middot; Minimalist design</span>
+          <h4>Let users adapt the interface to their vision</h4>
+          <p><strong>Problem:</strong> Fixed UI with small text and low contrast excludes users with visual or cognitive impairments.</p>
+          <p><strong>Decision:</strong> High-contrast task cards, four primary nav destinations, and accessibility settings (text size, bold text, high-contrast mode) in Profile with live preview.</p>
+          <p><strong>Interaction:</strong> Slide to adjust text size or toggle high-contrast mode before saving. Familiar bottom nav and large toggles reduce memorization.</p>
+        </div>
+
+        <div class="img-pair">
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p7-img2.jpeg" alt="High contrast mode settings with live preview" />
+            <figcaption>High-contrast mode toggle with live preview before saving.</figcaption>
+          </figure>
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p7-img3.jpeg" alt="Text size settings with bold text toggle and slider" />
+            <figcaption>Text size slider with bold text toggle in Profile Settings.</figcaption>
+          </figure>
+        </div>
+        <figure class="figure-phone">
+          <img src="assets/daily-dose/figures/pres-p7-img1.jpeg" alt="Today's tasks screen with large high-contrast task cards" />
+          <figcaption>Today&rsquo;s tasks using large type, high-contrast cards, and clear tap-to-complete controls.</figcaption>
+        </figure>
+
+        <h3>3. Personalization and caregiver connection</h3>
+        <p><em>Addresses:</em> Fragmented communication and lack of personalized support</p>
+
+        <div class="design-decision">
+          <span class="principle-tag">Flexibility &middot; Mental models &middot; Direct communication</span>
+          <h4>Centralize reminders, contacts, and AI support</h4>
+          <p><strong>Problem:</strong> Users switch between apps for reminders, caregiver contact, and immediate help with medication questions.</p>
+          <p><strong>Decision:</strong> Familiar alarm-page patterns for managing reminders, built-in doctor and caregiver contacts with messaging, and an AI companion for immediate answers. Multiple ways to add medication: typing, scanning, or provider import.</p>
+          <p><strong>Interaction:</strong> Manage reminders from a calendar view, message contacts in-app, or ask the AI companion without leaving the app.</p>
+        </div>
+
+        <div class="img-pair">
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p8-img1.jpeg" alt="Reminders screen with calendar and missed dose toggles" />
+            <figcaption>Alarm page with familiar calendar and toggle patterns for managing reminders.</figcaption>
+          </figure>
+          <figure class="figure-phone">
+            <img src="assets/daily-dose/figures/pres-p8-img2.jpeg" alt="Contacts screen with AI companion and doctor and caregiver cards" />
+            <figcaption>Contacts hub with AI companion and one-tap access to doctors and caregivers.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Prototype</h2>
+        <p>Our team linked lo-fi and hi-fi frames in a clickable Figma prototype and recorded a narrated video walkthrough.</p>
+        <p>
+          <a class="case-external-link" href="https://www.figma.com/proto/HdGO497yGjpqMjgrzuVFvc/Cogs-120-Low-fi?node-id=304-4214&amp;p=f&amp;t=n85lFXev3AnyfQlo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=238%3A1254&amp;starting-point-node-id=304%3A4214" target="_blank" rel="noopener">View Figma prototype &rarr;</a>
+        </p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/LbSjmRNygWw" title="Daily Dose prototype demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>What We Would Improve</h2>
+        <p>Our final critique identified these documented limitations. None were implemented in the deliverables.</p>
+        <ul>
+          <li><strong>Text-heavy medication pages:</strong> dense information could cause cognitive overload; progressive disclosure or AI simplification would help.</li>
+          <li><strong>Too many steps in some flows:</strong> icons, tooltips, smart defaults, or scan-based input could reduce friction.</li>
+          <li><strong>Underutilized AI assistant:</strong> currently on one page; a persistent icon with proactive suggestions would increase its value.</li>
+          <li><strong>Limited caregiver intervention:</strong> providers can monitor but not intervene directly; dedicated dependent sign-in flows would expand their role.</li>
+          <li><strong>Inconsistent visual design:</strong> button styles and transitions vary; a stronger design system would improve predictability.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Reflection</h2>
+        <p>Daily Dose pushed our team to design for users whose needs differ sharply from our own. Grounding features in published research and HCI principles kept the project focused on interaction behavior, not just visual polish.</p>
+        <p>The 12.7-step average in existing adherence products set a clear benchmark. Making dose status visible, limiting alarm controls, and placing accessibility settings where users can discover them were deliberate responses to documented gaps.</p>
+      </section>
+    </div>
+
+    <nav class="case-nav">
+      <a href="ez-events.html">&larr; Previous Project</a>
+      <a href="zara-website-redesign.html">Next Project &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>&copy; Sonakshi Mohanty</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
