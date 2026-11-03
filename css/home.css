@@ -193,6 +193,16 @@ nav.top .links a.active { opacity: 1; color: var(--screen-glow); }
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
 
+.hero-school {
+  margin-top: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--screen-glow);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
 /* removed .plant-stage — canvas is full-bleed inside .hero */
 
 section.projects {
