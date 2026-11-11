@@ -418,5 +418,3 @@ footer.site-footer a:hover { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
-
-.nowrap { white-space: nowrap; }
