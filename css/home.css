@@ -197,8 +197,9 @@ nav.top .links a.active { opacity: 1; color: var(--screen-glow); }
   margin-top: 14px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.16em;
-  color: var(--screen-glow);
+  color: var(--dust);
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
@@ -402,10 +403,11 @@ footer.site-footer a:hover { opacity: 1; }
   padding: 12px 22px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--forest);
-  background: var(--screen-glow);
+  background: var(--dust);
   border-radius: 999px;
   text-decoration: none;
   pointer-events: auto;

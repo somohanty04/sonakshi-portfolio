@@ -12,6 +12,22 @@
     return;
   }
 
+  // Reserve the headline's final height up front so the hero doesn't grow
+  // (and shift) when "designer." wraps onto a new line mid-typing.
+  const h1 = el.closest("h1");
+  function reserveHeight() {
+    if (!h1) return;
+    const current = el.textContent;
+    h1.style.minHeight = "";
+    el.textContent = word;
+    const full = h1.offsetHeight;
+    el.textContent = current;
+    h1.style.minHeight = full + "px";
+  }
+  reserveHeight();
+  window.addEventListener("resize", reserveHeight);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserveHeight);
+
   let charIdx = 0;
   function tick() {
     charIdx++;
