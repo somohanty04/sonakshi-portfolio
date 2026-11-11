@@ -1,40 +1,25 @@
-// Typewriter effect for the home hero (matches the original Wix site:
-// cycles through designer / researcher / strategist)
+// Typewriter effect for the home hero: types "product designer." once and stops.
 (function () {
   const el = document.getElementById("typewriter-text");
   if (!el) return;
 
-  const words = ["designer.", "researcher.", "strategist."];
-  let wordIdx = 0;
-  let charIdx = 0;
-  let deleting = false;
+  const word = "product designer.";
+  const reduceMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function tick() {
-    const word = words[wordIdx];
-
-    if (!deleting) {
-      charIdx++;
-      el.textContent = word.slice(0, charIdx);
-      if (charIdx === word.length) {
-        deleting = true;
-        setTimeout(tick, 1600);
-        return;
-      }
-      setTimeout(tick, 140);
-    } else {
-      charIdx--;
-      el.textContent = word.slice(0, charIdx);
-      if (charIdx === 0) {
-        deleting = false;
-        wordIdx = (wordIdx + 1) % words.length;
-        setTimeout(tick, 350);
-        return;
-      }
-      setTimeout(tick, 70);
-    }
+  if (reduceMotion) {
+    el.textContent = word;
+    return;
   }
 
-  tick();
+  let charIdx = 0;
+  function tick() {
+    charIdx++;
+    el.textContent = word.slice(0, charIdx);
+    if (charIdx < word.length) setTimeout(tick, 110);
+  }
+
+  setTimeout(tick, 400);
 })();
 
 // Mobile nav toggle
